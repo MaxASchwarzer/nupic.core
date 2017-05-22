@@ -54,4 +54,5 @@ test:
     - cp dist/*.whl $CIRCLE_ARTIFACTS/
     # If not on a fork, upload artifacts to S3
     - if [[ "$CIRCLE_REPOSITORY_URL" == "https://github.com/MaxASchwarzer/nupic.core" ]]; then ci/circle/deploy_s3-osx.sh; else echo "Skipping deployment, as this is a fork"; fi
+    # Empty change to allow a test PR
     
